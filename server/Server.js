@@ -52,6 +52,10 @@ class Server {
       console.log("zuri task 2 server is up at port " + this.#port);
     });
   };
+
+  getServerApp = () => {
+    return this.#app
+  }
 }
 
 module.exports = Server;

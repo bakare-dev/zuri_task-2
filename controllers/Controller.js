@@ -139,7 +139,7 @@ class Controller {
 
             if (response[0] != 1) {
                 this.#helper.logger(response);
-                res.status(200).json({error: "internal server error"});
+                res.status(400).json({error: "internal server error"});
                 return;
             }
 
