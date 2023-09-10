@@ -1,3 +1,0 @@
-[2023-09-10T19:35:57.942Z] query is not defined
-[2023-09-10T19:57:28.586Z] Cannot read properties of null (reading 'id')
-[2023-09-10T20:00:41.587Z] Cannot read properties of null (reading 'id')
