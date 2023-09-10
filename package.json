@@ -17,6 +17,8 @@
     "mysql2": "^3.6.1",
     "sequelize": "^6.33.0",
     "supertest": "^6.3.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
     "validate.js": "^0.13.1"
   }
 }
