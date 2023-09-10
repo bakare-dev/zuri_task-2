@@ -1,6 +1,4 @@
 # zuri_task-2
-
-
 # step 1
 - create a .env file and it should have all this
     APPLICATION_PORT=9004
@@ -20,3 +18,44 @@
 # To run test, run "npm run test"
 
 # To view documentation, open http://localhost:9004/swagger
+
+# UML Diagram: 
+- https://drive.google.com/file/d/1hzb2CEEQdE5uRqVk1OKMYnf_w5NyZ1ZR/view?usp=drive_link
+
++--------------------------------+
+|   API                          |
++--------------------------------+
+|                                |
++--------------------------------+
+        |
+        |
+        V
+
++--------------+                           +-------------+
+|    Person    |   MySQL Database           |  Database   |
+|              |<--------------------------|             |
+| - id         |                           |             |
+| - name       |                           |             |
+| - age        |                           |             |
+| - address    |                           |             |
+|              |                           |             |
+| +create()   |                           |             |
+| +readById() |                           |             |
+| +readByName()|                           |             |
+| +update()   |                           |             |
+| +delete()   |                           |             |
++--------------+                           +-------------+
+
+
+# ER Diagram
+
++------------------+
+|      User        |
++------------------+
+|                  |
+| - id (PK)        |
+| - name           |
+|                  |
++------------------+
+
+- https://drive.google.com/file/d/1wJvs9jB4TlV4ZioWasqZ7uGPpE-GXZ_U/view?usp=sharing
