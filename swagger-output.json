@@ -249,8 +249,8 @@
     },
     "/api/user/{key}": {
       "get": {
-        "summary": "Get user by key",
-        "description": "Retrieve a user by their key.",
+        "summary": "Get user by name or id",
+        "description": "Retrieve a user by their name or id.",
         "parameters": [
           {
             "in": "path",
