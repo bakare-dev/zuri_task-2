@@ -1,4 +1,20 @@
 # zuri_task-2
+
+- hosted endpoints
+
+# server health
+- https://bakare-zuri-task-2.onrender.com/health
+# documentation
+- https://bakare-zuri-task-2.onrender.com/swagger/
+
+# endpoints
+- get all users ( https://bakare-zuri-task-2.onrender.com/api/users ) (get request)
+- get users ( https://bakare-zuri-task-2.onrender.com/api/user ) (get request) (either by name or id)
+- create user ( https://bakare-zuri-task-2.onrender.com/api/user ) (post request)
+- update user ( https://bakare-zuri-task-2.onrender.com/api/user ) (put request)
+- delete user ( https://bakare-zuri-task-2.onrender.com/api/user ) (delete request)
+
+- To run locally, follow the steps below
 # step 1
 - create a .env file and it should have all this
     APPLICATION_PORT=9004
