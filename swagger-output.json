@@ -11,71 +11,7 @@
     }
   },
   "paths": {
-    "/": {
-      "get": {
-        "summary": "Welcome message",
-        "description": "Get a welcome message and links to server health and API documentation.",
-        "responses": {
-          "200": {
-            "description": "Welcome message and links",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string",
-                      "description": "A welcome message.",
-                      "example": "Your have reached Bakare Praise Zuri Task 2 Server"
-                    },
-                    "health": {
-                      "type": "string",
-                      "description": "URL to check server health.",
-                      "example": "/health"
-                    },
-                    "docs": {
-                      "type": "string",
-                      "description": "URL to access API documentation.",
-                      "example": "/swagger"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/health": {
-      "get": {
-        "summary": "Check server health",
-        "description": "Check if the server is running fine.",
-        "responses": {
-          "200": {
-            "description": "Server is running fine",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "string"
-                    }
-                  },
-                  "example": {
-                    "message": "Server is running fine"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error"
-          }
-        }
-      }
-    },
-    "/api/user": {
+    "/api": {
       "post": {
         "summary": "Create a new user",
         "description": "Create a new user record.",
@@ -178,81 +114,7 @@
         }
       }
     },
-    "/api/users": {
-      "get": {
-        "summary": "Get a list of all users",
-        "description": "Retrieve a list of all users from the server.",
-        "parameters": [
-          {
-            "name": "page",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "default": 0,
-              "description": "Page number (default: 0)"
-            },
-            "description": "Page number for pagination."
-          },
-          {
-            "name": "size",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "integer",
-              "default": 20,
-              "description": "Page size (default: 20)"
-            },
-            "description": "Number of users per page."
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "List of users retrieved successfully",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "count": {
-                      "type": "integer",
-                      "description": "The total count of users.",
-                      "example": 0
-                    },
-                    "users": {
-                      "type": "array",
-                      "description": "An array of user objects.",
-                      "items": {
-                        "type": "object",
-                        "properties": {}
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "error": {
-                      "type": "string",
-                      "description": "Error message.",
-                      "example": "Internal server error"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/user/{key}": {
+    "/api/{key}": {
       "get": {
         "summary": "Get user by name or id",
         "description": "Retrieve a user by their name or id.",
@@ -327,7 +189,7 @@
         }
       }
     },
-    "/api/user/{id}": {
+    "/api/{id}": {
       "put": {
         "summary": "Update user details by ID",
         "description": "Update user details based on their ID.",

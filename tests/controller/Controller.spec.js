@@ -21,7 +21,7 @@ describe("User Route Controller Test", () => {
     };
 
     request(server.getServerApp())
-      .post("/api/user")
+      .post("/api")
       .expect("Content-Type", /json/)
       .send(user)
       .expect(200)
@@ -36,23 +36,9 @@ describe("User Route Controller Test", () => {
       });
   });
 
-  test("User controller can get all users", (done) => {
-    request(server.getServerApp())
-      .get("/api/users?page=0&size=50")
-      .expect("Content-Type", /json/)
-      .expect(200)
-      .expect((res) => {
-        expect(res.body.count).not.toBeNaN();
-      })
-      .end((err, res) => {
-        if (err) return done(err);
-        return done();
-      });
-  });
-
   test("User controller can get one user by name", (done) => {
     request(server.getServerApp())
-      .get(`/api/user/${entityName}`)
+      .get(`/api/${entityName}`)
       .expect("Content-Type", /json/)
       .expect(200)
       .expect((res) => {
@@ -66,7 +52,7 @@ describe("User Route Controller Test", () => {
 
   test("User controller can get one user by id", (done) => {
     request(server.getServerApp())
-      .get(`/api/user/${entityId}`)
+      .get(`/api/${entityId}`)
       .expect("Content-Type", /json/)
       .expect(200)
       .expect((res) => {
@@ -84,7 +70,7 @@ describe("User Route Controller Test", () => {
     };
 
     request(server.getServerApp())
-      .put(`/api/user/${entityId}`)
+      .put(`/api/${entityId}`)
       .expect("Content-Type", /json/)
       .send(user)
       .expect(200)
@@ -99,7 +85,7 @@ describe("User Route Controller Test", () => {
 
   test("User controller can delete", (done) => {
     request(server.getServerApp())
-      .delete(`/api/user/${entityId}`)
+      .delete(`/api/${entityId}`)
       .expect("Content-Type", /json/)
       .expect(200)
       .expect((res) => {

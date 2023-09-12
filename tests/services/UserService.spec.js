@@ -53,16 +53,6 @@ describe("User Service class test", () => {
     expect(testResponse.id).toBeGreaterThan(0);
   });
 
-  it("it can get all users", async () => {
-    const query = {
-      page: 0,
-      size: 50,
-    };
-    const testResponse = await userService.fetchAll(query);
-
-    expect(testResponse.count).not.toBeNaN();
-  });
-
   it("it can delete user", async () => {
     await userService.delete(entityId);
 

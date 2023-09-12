@@ -4,33 +4,28 @@ const controller = new Controller();
 
 router.get("/", (req, res) => {
     res.status(200).json({
-        getusers: {
-            route: "/users",
-            methods: ["GET"]
-        },
         createuser: {
-            route: "/user",
+            route: "/",
             methods: ["POST"]
         },
         getuser: {
-            route: "/user/:key", //key can be name or id
+            route: "/:key", //key can be name or id
             methods: ["GET"]
         },
         updateuser: {
-            route: "/user/:id",
+            route: "/:id",
             methods: ["PUT"]
         },
         deleteuser: {
-            route: "/user/:id",
+            route: "/:id",
             methods: ["DELETE"]
         }
     })
     
 })
-router.get("/users", controller.getUsers);
-router.get("/user/:key", controller.getUser);
-router.post("/user", controller.createUser);
-router.put("/user/:id", controller.updateUser);
-router.delete("/user/:id", controller.deleteUser);
+router.get("/:key", controller.getUser);
+router.post("/", controller.createUser);
+router.put("/:id", controller.updateUser);
+router.delete("/:id", controller.deleteUser);
 
 module.exports = router;
