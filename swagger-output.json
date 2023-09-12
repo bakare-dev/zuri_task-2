@@ -1,9 +1,14 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Zuri Task 2",
+    "title": "Zuri Task 2 (Basic CRUD)",
     "version": "1.0.0",
-    "description": "Bakare Praise"
+    "description": "A REST API with Basic CRUD Operation",
+    "contact": {
+      "name": "Bakare Praise",
+      "email": "bakarepraise3@gmail.com",
+      "url": "https://bakare.tech"
+    }
   },
   "paths": {
     "/": {
