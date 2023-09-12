@@ -1,6 +1,6 @@
 # zuri_task-2
-
 - hosted endpoints
+- https://crud.bakare.tech/
 
 # server health
 - https://crud.bakare.tech/health
