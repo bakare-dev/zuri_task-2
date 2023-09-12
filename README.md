@@ -1,18 +1,18 @@
 # zuri_task-2
-
 - hosted endpoints
+- https://crud.bakare.tech/
 
 # server health
-- https://bakare-zuri-task-2.onrender.com/health
+- https://crud.bakare.tech/health
 # documentation
-- https://bakare-zuri-task-2.onrender.com/swagger/
+- https://crud.bakare.tech/swagger/
 
 # endpoints
-- get all users ( https://bakare-zuri-task-2.onrender.com/api/users ) (get request)
-- get users ( https://bakare-zuri-task-2.onrender.com/api/user ) (get request) (either by name or id)
-- create user ( https://bakare-zuri-task-2.onrender.com/api/user ) (post request)
-- update user ( https://bakare-zuri-task-2.onrender.com/api/user ) (put request)
-- delete user ( https://bakare-zuri-task-2.onrender.com/api/user ) (delete request)
+- get all users ( https://crud.bakare.tech/api/users ) (get request)
+- get users ( https://crud.bakare.tech/api/user ) (get request) (either by name or id)
+- create user ( https://crud.bakare.tech/api/user ) (post request)
+- update user ( https://crud.bakare.tech/api/user ) (put request)
+- delete user ( https://crud.bakare.tech/api/user ) (delete request)
 
 - To run locally, follow the steps below
 # step 1
