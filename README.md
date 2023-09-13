@@ -8,11 +8,10 @@
 - https://crud.bakare.tech/swagger/
 
 # endpoints
-- get all users ( https://crud.bakare.tech/api/users ) (get request)
-- get users ( https://crud.bakare.tech/api/user ) (get request) (either by name or id)
-- create user ( https://crud.bakare.tech/api/user ) (post request)
-- update user ( https://crud.bakare.tech/api/user ) (put request)
-- delete user ( https://crud.bakare.tech/api/user ) (delete request)
+- get user ( https://crud.bakare.tech/api ) (get request) (either by name or id)
+- create user ( https://crud.bakare.tech/api ) (post request)
+- update user ( https://crud.bakare.tech/api ) (put request)
+- delete user ( https://crud.bakare.tech/api ) (delete request)
 
 - To run locally, follow the steps below
 # step 1
