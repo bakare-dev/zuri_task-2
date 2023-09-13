@@ -22,30 +22,6 @@ class Controller {
         instance = this;
     }
 
-    getUsers = async (req, res) => {
-        try {
-            const validation = validate(req.query, this.#constraint.getAllUserConstraint());
-
-            if(validation) {
-                res.status(400).json(validation);
-                return;
-            }
-
-            const users = await this.#service.fetchAll(req.query);
-
-            if (!users.count) {
-                this.#helper.logger(users);
-                res.status(400).json({error: "internal server error"})
-                return;
-            }
-
-            res.status(200).json(users)
-        } catch (ex) {
-            this.#helper.logger(ex);
-            res.status(500).json({error: "internal server error"});
-        }
-    }
-
     getUser = async (req, res) => {
         try {
             //validate user inputs
